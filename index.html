@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de compras</title>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <!-- Libreria sweetalert -->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="container-fluid bg-white position-sticky top-0">
+      <ul
+        class="nav nav-pills mb-3 py-3 container"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item text-primary" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-home"
+            type="button"
+            role="tab"
+            aria-controls="pills-home"
+            aria-selected="true"
+            >Inicio</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="pills-profile"
+            aria-selected="false"
+            >Productos</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="pills-contact-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-contact"
+            type="button"
+            role="tab"
+            aria-controls="pills-contact"
+            aria-selected="false"
+            >Carrito</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <div
+      class="alert container position-sticky top-0 alert-primary hide"
+      role="alert"
+    >
+      Producto Añadido al carrito!
+    </div>
+    <div
+      class="alert container position-sticky top-0 alert-danger remove"
+      role="alert"
+    >
+      Producto removido!
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade"
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+      >
+        1
+      </div>
+      <div
+        class="tab-pane fade show active container"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+      >
+        <h2 class="h3 m-5 text-primary">Menu</h2>
+
+        <div
+          class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"
+        >
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">
+                Carre de cerdo
+              </h5>
+              <img src="./img/comida1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Carre de cerdo con papas rusticas
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 1300</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">Salmon</h5>
+              <img
+                src="./img/salmon-grillado-timbal-arroz.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Salmón a la plancha con guarnición de vegetales salteados y
+                  porción de arroz
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 1500</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">
+                Pollo grillado
+              </h5>
+              <img
+                src="./img/pollo-asado-marinado-con-especias.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Pollo asado marinado con especias y guarnicion
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 900</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">Ravioles</h5>
+              <img
+                src="./img/ravioli-calabaza-ricotta-salsa-mantequilla-trufa-salvia.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Ravioles ricotta y calabaza con salsa mantequilla trufa y
+                  salvia
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 850</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">
+                Ojo de bife
+              </h5>
+              <img src="./img/ojo-de-bife.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur, odit aperiam. Magni laboriosam, porro ipsum
+                  architecto laborum praesentium ratione eos dicta quisquam
+                  vitae illum molestiae? Voluptatem amet dicta eveniet a.
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 1050</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">
+                Tallarines
+              </h5>
+              <img
+                src="./img/tallarines-con-crema-de-hongos.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Tallarines con crema de hongos
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 925</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">
+                Panna Cota
+              </h5>
+              <img src="./img/panna-cotta.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Minus sed cumque excepturi esse placeat! Labore tempore illum
+                  unde vel doloribus nisi, quasi nihil odio fugit incidunt! Esse
+                  praesentium sit aliquam?
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 600</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 15rem">
+              <h5 class="card-title pt-2 text-center text-primary">
+                Volcan de chocolate
+              </h5>
+              <img
+                src="./img/fondant-au-chocolat.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Facere debitis tempora nulla magnam modi ea incidunt
+                  reprehenderit eos labore temporibus itaque, dicta repellendus
+                  commodi, minima inventore, ducimus enim laboriosam iusto!
+                </p>
+                <h5 class="text-primary">
+                  Precio: <span class="precio">$ 750</span>
+                </h5>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary button">
+                    Agregar a Carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade carrito"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+        <br />
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr class="text-primary">
+              <th scope="col">#</th>
+              <th scope="col">Productos</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody class="tbody"></tbody>
+        </table>
+        <br /><br />
+        <div class="row mx-4">
+          <div class="col">
+            <h3 class="itemCartTotal text-dark">Total: 0</h3>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button id="botonCompra" class="btn btn-success">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- formulario -->
+    <div class="container">
+      <div class="container">
+        <h2>CONTACTO</h2>
+      </div>
+      <form id="formulario" action="/redireccion">
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+            >Apellido y Nombre</label
+          >
+          <input type="text" class="form-control" id="nombre" />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Email</label>
+          <input type="text" class="form-control" id="correo" />
+        </div>
+        <button type="submit" class="btn btn-outline-success">Enviar</button>
+      </form>
+    </div>
+
+    <!-- ACA SE MUESTRAN LOS DATOS -->
+    <div class="container">
+      <div class="datos"></div>
+    </div>
+
+    <!-- MUESTRA LOS PORDUCTOS DEL JSON -->
+
+    <div id="listaProductos"></div>
+
+    <footer class="bg-dark p-3 mt-5">
+      <p class="text-center m-0 text-muted">®Copyright AlcuazJuanManuel 2023</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript  -->
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
